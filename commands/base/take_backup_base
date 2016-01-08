@@ -1,0 +1,6 @@
+send "d=`date +'%d%m%y'`"
+send "mkdir -p /home/tomcat/backup/$d"
+send "cp -r /home/deploy/${arg_backup_module}/ /home/tomcat/backup/$d"
+send "cd /home/tomcat/backup/$d"
+send "pwd"
+send "ll"

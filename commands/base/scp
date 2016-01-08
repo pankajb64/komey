@@ -1,0 +1,1 @@
+send "scp ${arg_scp_files_cmd} ${arg_scp_dest}" expect 2 times "\(yes/no\).*,assword:\s*,\$" respond with "yes,${arg_scp_password},"

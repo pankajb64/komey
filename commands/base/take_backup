@@ -1,0 +1,3 @@
+ssh login at ${arg_backup_host} with credentials from ${arg_backup_cred} set nick arg_backup_${arg_backup_host}
+execute base/take_backup_base
+ssh logout

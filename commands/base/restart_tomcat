@@ -1,0 +1,5 @@
+ssh login at ${arg_restart_tomcat_host} with credentials from ${arg_restart_tomcat_cred} set nick arg_restart_tomcat
+send "sudo su tomcat" expect 1 time "assword:,\$" respond with "${arg_restart_tomcat_sudo_password},"
+execute base/restart_tomcat_base
+send "exit"
+ssh logout

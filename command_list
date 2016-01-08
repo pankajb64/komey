@@ -1,0 +1,18 @@
+service admin activate
+service admin deactivate
+grep java
+check tomcat status
+check apache status
+stop tomcat
+start tomcat
+restart tomcat
+stop apache
+start apache
+restart apache
+reload apache
+grep something in file
+ssh login
+sudo su tomcat
+sudo -s (become root)
+exit from tomcat/root/ssh
+

@@ -1,0 +1,3 @@
+send "cd ${arg_module}"
+send "ant"
+send "cd .."

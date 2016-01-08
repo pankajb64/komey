@@ -1,0 +1,1 @@
+send "tail -f ${arg_file_path}"

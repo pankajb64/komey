@@ -1,0 +1,1 @@
+send "/etc/init.d/tomcat restart" expect 1 time "\(Yes/No\)\s*:\s*" respond with "No"

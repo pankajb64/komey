@@ -1,0 +1,5 @@
+send "cd /home/deploy/${arg_module}/bin"
+send "sudo -S su tomcat" expect 1 time "assword:\s*,\$" respond with "${arg_mod_password},"
+send "./stop.sh"
+send "exit"
+send "cd"

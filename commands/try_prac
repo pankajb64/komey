@@ -1,0 +1,56 @@
+before you exit run exit/exit_commands
+#ssh login at pankajB.ho.games24x7.com with credentials from local set nick local_term
+#put in cache branch_name equal to MultilingualProject
+#send "cd"
+#send "pwd"
+#send "cd work/2015/${branch_name}"
+#send "pwd"
+#ant build frameworks, service_common, hibernate_pkr, games_common
+#ant build bpl, fund_manager, VIPFastCreditRecovery
+#execute base/take_backup with args {"backup_host":"10.14.24.22", "backup_cred":"try"}
+#take backup at 10.14.24.22, 10.14.21.14, 54.254.167.219 with credentials from try
+#take backup for bpl at 54.255.198.88 with credentials from try
+#ssh login at 54.255.198.88 with credentials from try
+#take backup for bpl
+#restart tomcat at 10.14.24.163 with credentials from try
+#ssh login at try.rummycircle.com with credentials from try set nick try_rc
+#send "sudo su tomcat" expect 1 time "assword:,\$" respond with "${try_rc_sudo_password},"
+#restart tomcat
+#send "exit"
+#ssh logout
+#restart tomcat at try.rummycircle.com with credentials from try
+#execute base/restart_try_rc_apache
+#ssh logout
+#execute base/restart_try_cr_mrc_analytics_apache
+#execute base/restart_try_cr_rc_apache
+#execute base/restart_try_cs_164_apache
+#execute base/restart_try_cs_219_apache
+#execute base/restart_try_mrc_secure_apache
+#execute base/restart_try_psp_tsp_gms_apache
+#execute base/restart_try_rc_static_android_apache
+#execute base/restart_try_td_163_apache
+#execute base/restart_try_td_248_apache
+#execute base/restart_try_webadmin_pkradmin_apache
+#scp -r one to 10.14.24.163, 10.14.24.164 at /home/tomcat with credentials from try
+#ssh login at 10.14.24.163 with credentials from try
+#send "cd /home/tomcat"
+#send "ll"
+#send "ll one"
+#send "ll one/two"
+#send "ll one/two/three"
+#send "ll one/two/three/four"
+#ssh logout
+#ssh login at 10.14.24.164 with credentials from try
+#send "cd /home/tomcat"
+#send "ll"
+#send "ll one"
+#send "ll one/two"
+#send "ll one/two/three"
+#send "ll one/two/three/four"
+#ssh logout
+#ssh login at 10.14.24.165 with credentials from try
+#monitor log /home/deploy/fm/logs/fm.log
+#send "tail -f /home/deploy/fm/logs/* | grep RMI" interact
+#ssh logout
+#start te on 10.14.24.162 with credentials from try
+#build and deploy te-10.14.24.161, fm-10.14.24.165 using try build tool on 192.168.50.202:8080

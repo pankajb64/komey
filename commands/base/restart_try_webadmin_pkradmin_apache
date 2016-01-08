@@ -1,0 +1,3 @@
+ssh login at 10.14.24.15 with credentials from try set nick ra_try_webadmin_pkradmin
+send "sudo -S /etc/init.d/httpd restart" expect 2 times "assword.*:\s*,webadmin\.rummycircle\.com.*,\$" respond with "${ra_try_webadmin_pkradmin_sudo_password},Je9ChZ0505,"
+ssh logout

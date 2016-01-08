@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<project
+    xmlns:ns2="com.games24x7.buildautomation.ServicesMapped"
+    xmlns:ns3="com.games24x7.buildautomation.Project">
+    <branchurl>http://192.168.50.241/Games24x7/branches/EhcacheLockingAndMTTFairplayRemoval</branchurl>
+    <buildenv>tryEnv</buildenv>
+    <dbmaster>db-master.rummycircle.com:3306/games24x7v3</dbmaster>
+    <dbslave>db-slave1.rummycircle.com:3306/games24x7v3</dbslave>
+    <name>try</name>
+    <servicesmapped>
+         <ip value="10.14.24.11" internalip="10.14.24.11">
+            <service>mq</service>
+            <service>memcache</service>
+            <service>ehcache</service>
+        </ip>
+        <ip value="54.254.244.122" internalip="10.14.21.23">
+            <service>rummycircle</service>
+        </ip>
+        <ip value="54.251.167.248" internalip="10.14.21.14">
+            <service>aaae</service>
+            <service>cm</service>
+        </ip>
+        <ip value="10.14.24.14" internalip="10.14.24.14">
+            <service>gms</service>
+            <service>psp</service>
+            <service>tsp</service>
+        </ip>
+        <ip value="10.14.24.22" internalip="10.14.24.22">
+            <service>thirdparty</service>
+            <service>tc</service>            
+            <service>fm</service>
+        </ip>
+        <ip value="10.14.24.13" internalip="10.14.24.13">
+            <service>thirdparty</service>
+            <service>eds</service>
+            <service>cepmq</service>
+        </ip>
+        <ip value="54.254.239.208" internalip="10.14.21.22">
+            <service>m.rummycircle</service>
+            <service>securepay</service>
+        </ip>
+        <ip value="54.254.167.219" internalip="10.14.21.21">
+            <service>thirdparty</service>
+            <service>bpl</service>
+            <service>cs</service>
+        </ip>
+        <ip value="10.14.24.15" internalip="10.14.24.15">
+            <service>web_admin</service>
+	    <service>pkr_admin</service>
+        </ip>
+        <ip value="10.14.24.126" internalip="10.14.24.126">
+            <service>fusion_proxy</service>
+            <service>fusion_service</service>
+        </ip>
+         <ip value="54.254.231.167" internalip="10.14.21.24">
+            <service>rummycircle</service>
+        </ip>
+        <ip value="54.254.159.116" internalip="10.14.21.11">
+            <service>m.rummycircle</service>
+	    <service>analytics</service>
+        </ip>
+        <ip value="52.74.60.74" internalip="10.14.21.159">
+            <service>notifier</service>
+            <service>hh</service>
+        </ip>
+        <ip value="10.14.24.163" internalip="10.14.24.163">
+            <service>daemon</service>
+        </ip>
+	<ip value="10.14.24.161" internalip="10.14.24.161">
+	    <service>thirdparty</service>
+            <service>te</service>
+        </ip>
+	<ip value="10.14.24.162" internalip="10.14.24.162">
+	    <service>thirdparty</service>
+            <service>te</service>
+        </ip>
+	<ip value="10.14.24.164" internalip="10.14.24.164">
+	    <service>thirdparty</service>
+            <service>cs</service>
+        </ip>
+	<ip value="10.14.24.165" internalip="10.14.24.165">
+	    <service>thirdparty</service>
+            <service>fm</service>
+            <service>tc</service>
+        </ip>
+    </servicesmapped>
+    <timestamp>1392367425578</timestamp>
+    <username>demo</username>
+</project>

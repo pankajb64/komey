@@ -1,0 +1,3 @@
+ssh login at 54.254.231.167 with credentials from try set nick ra_try_cr_rc
+send "sudo -S /etc/init.d/httpd restart" expect 2 times "assword.*:\s*,rummycircle\.com.*,\$" respond with "${ra_try_cr_rc_sudo_password},H27C8q95pA,"
+ssh logout

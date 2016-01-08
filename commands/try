@@ -1,0 +1,5 @@
+hey there, before you exit run exit/exit_commands
+well, firstly you have to build rummycircle-54.254.244.122 using try build tool on 192.168.50.202:8080
+after that you will restart tomcat at 54.254.244.122 with credentials from try
+finally you will execute base/restart_try_rc_apache
+and just for time pass you can check the current directory by using send "pwd"

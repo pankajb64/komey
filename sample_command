@@ -1,0 +1,22 @@
+I solemnly swear that I am up to no good doing this deployment
+Oh btw, before you exit run exit/exit_commands
+#deactivate TE-57, CS-60 from service_admin
+#sleep for 5 seconds
+#activate TE-57
+#print current directory
+#ssh login at 10.14.24.22 with credentials from try and set nick try_fm
+#put in cache try_aaae_ip equal to 10.14.21.14
+#ssh login at ${try_aaae_ip} with credentials from try set nick try_aaae
+#switch to try_fm
+#remove from cache try_aaae_ip
+#send "sudo su tomcat" expect 1 time "assword:,\$" respond with "${try_fm_sudo_password},"
+#send "/etc/init.d/tomcat restart" expect 1 time "\(Yes/No\)\s*:\s*" respond with "No"
+#send "exit"
+#ssh login at 54.254.167.219 with credentials from try set nick try_bpl
+#ssh login at try.rummycircle.com with credentials from try set nick try_rc
+#send "sudo -S /etc/init.d/httpd restart" expect 4 times "assword.*:\s*,static\.rummycircle\.com.*,android\.rummycircle\.com.*,rummycircle\.com,\$" respond with "${try_rc_sudo_password},lwUA04uC7t,h3K30c7T0S,H27C8q95pA,"
+#send "timeout 10 tail -f /opt/tomcat-6/logs/catalina.out"
+#ssh logout
+#ssh logout from try_fm
+
+
