@@ -22,7 +22,16 @@ def load_cmd_map(cmd_map_file):
 			reg_act[0]=func_name
 			cmd_map[reg_str] = tuple(reg_act)
 			
-
+def get_action_args(act_list):
+	action_dict = {}
+	for action in act_list:
+		ac = action.split("=")
+		act_key = ac[0]
+		act_val = ac[1]
+		action_dict[act_key] = act_val
+	return action_dict	
+		
+	
 def switch_case(line):
 	#print "cmd_map is %s" % cmd_map
 	for reg_str, reg_act in cmd_map.iteritems():
@@ -33,7 +42,7 @@ def switch_case(line):
 			#print "Found a match"
 			user_args = match.groupdict()
 			action = reg_act[0]
-			action_args = reg_act[1:]
+			action_args = get_action_args(reg_act[1:])
 			action(action_args, user_args)
 			return True
 	return False

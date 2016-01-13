@@ -22,16 +22,18 @@
 \bsend\s+"(?P<command>[^"]+)"\s+expect(\s+(?P<count>\d+)\s+time(s)?)?\s+"(?P<expect_list>[^"]+)"\s+respond\s+with\s+"(?P<response_list>[^"]+)"(?P<interact>\s+interact)?$ actions.util.exec_util.send_command
 \bsend\s+"(?P<command>[^"]+)"(?P<interact>\s+interact)?$ actions.util.exec_util.send_command
 \bant\s+build\s+(?P<modules>(\w+\s*,?\s*)+)\b actions.util.build.ant_build
-\btake\s+backup(\s+for\s+(?P<module>\S+))?\s+at(?P<hosts>.+)\s+with\s+credentials\s+from\s+(?P<credentials>\S+)\b actions.util.build.take_backup
-\btake\s+backup(\s+for\s+(?P<module>\S+))?\b actions.util.build.take_backup_base
+\btake\s+backup(\s+for\s+(?P<modules>.+\S+))?\s+at(?P<hosts>.+)\s+with\s+credentials\s+from\s+(?P<credentials>\S+)\b actions.util.build.take_backup
+\btake\s+backup(\s+for\s+(?P<modules>.+\S+))?\b actions.util.build.take_backup_base
 \brestart\s+tomcat\s+at(?P<hosts>.+)\s+with\s+credentials\s+from\s+(?P<credentials>\S+)\b actions.util.restart.restart_tomcat
 \brestart\s+tomcat\b actions.util.restart.restart_tomcat_base
-\brestart\s+tomcat\s+at(?P<hosts>.+)\s+with\s+credentials\s+from\s+(?P<credentials>\S+)\b actions.util.restart.restart_tomcat
-\brestart\s+tomcat\b actions.util.restart.restart_tomcat_base
+#\brestart\s+apache\s+at(?P<hosts>.+)\s+with\s+credentials\s+from\s+(?P<credentials>\S+)\b actions.util.restart.restart_apache
+#\brestart\s+apache\b actions.util.restart.restart_apache_base
 \bscp\s+(?P<files>.+)\s+to\s+(?P<hosts>.+)\s+at\s+(?P<dest_dir>\S+)\s+with\s+credentials\s+from\s+(?P<credentials>\S+)\b actions.util.scp.scp
 #\bmonitor\s+log\s+(?P<file_path>\S+)\b actions.util.log.monitor_log
 \bstop\s+(?P<modules>.+)\s+on\s+(?P<hosts>.+)\s+with\s+credentials\s+from\s+(?P<credentials>\S+)\b actions.util.restart.stop_service
+\bstop\s+(?P<modules>.+)\b actions.util.restart.stop_service_local
 \bstart\s+(?P<modules>.+)\s+on\s+(?P<hosts>.+)\s+with\s+credentials\s+from\s+(?P<credentials>\S+)\b actions.util.restart.start_service
+\bstart\s+(?P<modules>.+)\b actions.util.restart.start_service_local
 \bbuild(\s+and(?P<deploy>\s+deploy))?\s+(?P<modules>.+)\s+using\s+(?P<env>\S+)\s+build\s+tool\s+on\s+(?P<host>.+)\b actions.util.build.build_deploy_service
 #checkout/update
 #build

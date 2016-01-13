@@ -1,5 +1,6 @@
 from actions.action_exec.action_exec import exec_command
 from actions.ssh.ssh import ssh_login, ssh_logout
+from actions.komey_util.komey_cache import get_from_cache
 import json
 import os
 
@@ -46,12 +47,22 @@ def stop_service(action_args, user_args):
 			credentials = json.load(f)
 		ssh_login(action_args, user_args)
 		for module in modules:
-			command_args= { "mod_password" : credentials["password"], "module" : module}
+			command_args= { "mod_password" : credentials["password"], "module" : module.strip()}
 			user_args["command_args"] = json.dumps(command_args)
 			user_args["command_file"] = "base/stop_base"
 			exec_command(action_args, user_args)
 		ssh_logout(action_args, user_args)	
 
+def stop_service_local(action_args, user_args):
+	modules = user_args["modules"].strip().split(",")
+	nick = get_from_cache('terminal')
+	password = get_from_cache(nick+'_sudo_password')
+	for module in modules:
+		command_args = { "mod_password" : password, "module" : module.strip() }
+		user_args["command_args"] = json.dumps(command_args)
+		user_args["command_file"] = "base/stop_base"
+		exec_command(action_args, user_args)
+		
 def start_service(action_args, user_args):
 	modules = user_args["modules"].strip().split(",")
 	hosts = user_args["hosts"].strip().split(",")
@@ -71,3 +82,13 @@ def start_service(action_args, user_args):
 			user_args["command_file"] = "base/start_base"
 			exec_command(action_args, user_args)
 		ssh_logout(action_args, user_args)	
+
+def start_service_local(action_args, user_args):
+	modules = user_args["modules"].strip().split(",")
+	nick = get_from_cache("terminal")
+	password = get_from_cache(nick+"_sudo_password")
+	for module in modules:
+		command_args = { "mod_password" : password, "module" : module.strip() }
+		user_args["command_args"] = json.dumps(command_args)
+		user_args["command_file"] = "base/stop_base"
+		exec_command(action_args, user_args)

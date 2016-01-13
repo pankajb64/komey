@@ -14,25 +14,27 @@ def ant_build(action_args, user_args):
 		exec_command(action_args, user_args)
 
 def take_backup(action_args, user_args):
-	module = user_args.get('module')
-	module = module.strip() if module is not None else ""
+	modules = user_args.get('modules')
+	modules = modules.strip().split(",") if modules is not None else [""]
 	hosts = user_args['hosts'].strip().split(",")
 	cred = user_args['credentials'].strip()
 	for host in hosts:
-		command_args = { "backup_host" : host.strip(), "backup_cred" : cred, "backup_module" : module }
-		print command_args
-		user_args["command_args"] = json.dumps(command_args)
-		user_args["command_file"] = "base/take_backup"
-		exec_command(action_args, user_args)
-
+		for module in modules:
+			command_args = { "backup_host" : host.strip(), "backup_cred" : cred, "backup_module" : module.strip() }
+			print command_args
+			user_args["command_args"] = json.dumps(command_args)
+			user_args["command_file"] = "base/take_backup"
+			exec_command(action_args, user_args)
 
 def take_backup_base(action_args, user_args):
 	#print "yaha aya"
-	module = user_args.get('module', '').strip()
-	command_args = {"backup_module" : module }
-	user_args["command_args"] = json.dumps(command_args)
-	user_args["command_file"] = "base/take_backup_base"
-	exec_command(action_args, user_args)
+	modules = user_args.get('modules', '')
+	modules = modules.strip().split(",") if modules is not None else [""]
+	for module in modules:
+		command_args = {"backup_module" : module.strip() }
+		user_args["command_args"] = json.dumps(command_args)
+		user_args["command_file"] = "base/take_backup_base"
+		exec_command(action_args, user_args)
 
 
 def build_deploy_service(action_args, user_args):

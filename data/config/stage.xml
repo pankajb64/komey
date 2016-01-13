@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:ns2="com.games24x7.buildautomation.ServicesMapped" xmlns:ns3="com.games24x7.buildautomation.Project">
+   <branchurl>http://192.168.50.241/Games24x7/branches/MultilingualProject/</branchurl>
+   <buildenv>stageEnv</buildenv>
+   <dbmaster>db-master.rummycircle.com:3306/games24x7v2</dbmaster>
+   <dbslave>db-slave1.rummycircle.com:3306/games24x7v2</dbslave>
+   <name>try</name>
+   <servicesmapped>
+      <ip value="54.251.137.98" internalip="10.14.21.155">
+         <service>securepay</service>
+      </ip>
+      <ip value="52.74.94.197" internalip="10.14.21.128">
+         <service>m.rummycircle</service>
+      </ip>
+      <ip value="10.14.24.115" internalip="10.14.24.115">
+         <service>mq</service>
+      </ip>
+      <ip value="10.14.24.112" internalip="10.14.24.112">
+         <service>memcache</service>
+         <service>ehcache</service>
+      </ip>
+      <ip value="54.255.179.194" internalip="10.14.21.156">
+         <service>m.rummycircle</service>
+      </ip>
+      <ip value="54.179.191.242" internalip="10.14.21.153">
+         <service>rummycircle</service>
+      </ip>
+      <ip value="54.251.136.226" internalip="10.14.21.154">
+         <service>daemon</service>
+      </ip>
+      <ip value="10.14.24.114" internalip="10.14.24.114">
+         <service>web_admin</service>
+         <service>pkr_admin</service>
+         <service>psp</service>
+      </ip>
+      <ip value="10.14.24.115" internalip="10.14.24.115">
+         <service>thirdparty</service>
+         <service>tc</service>
+      </ip>
+      <ip value="10.14.24.114" internalip="10.14.24.114">
+         <service>thirdparty</service>
+         <service>psp</service>
+         <service>tsp</service>
+      </ip>
+      <ip value="10.14.24.113" internalip="10.14.24.113">
+         <service>gms</service>
+      </ip>
+      <ip value="10.14.24.111" internalip="10.14.24.111">
+         <service>thirdparty</service>
+         <service>aaae</service>
+         <service>fm</service>
+      </ip>
+      <ip value="10.14.24.111" internalip="10.14.24.111">
+         <service>fm</service>
+      </ip>
+      <ip value="10.14.21.154" internalip="10.14.21.154">
+         <service>thirdparty</service>
+         <service>cm</service>
+      </ip>
+      <ip value="54.251.136.226" internalip="10.14.21.154">
+         <service>thirdparty</service>
+         <service>eds</service>
+         <service>cepmq</service>
+      </ip>
+      <ip value="54.255.179.194" internalip="10.14.21.156">
+         <service>m.rummycircle</service>
+      </ip>
+      <ip value="54.251.186.34" internalip="10.14.21.158">
+         <service>thirdparty</service>
+         <service>mobile_proxy</service>
+      </ip>
+      <ip value="10.14.24.111" internalip="10.14.24.111">
+         <service>thirdparty</service>
+         <service>te</service>
+      </ip>
+      <ip value="54.255.198.88" internalip="10.14.21.151">
+         <service>thirdparty</service>
+         <service>cs</service>
+         <service>te</service>
+         <service>bpl</service>
+      </ip>
+      <ip value="54.251.186.34" internalip="10.14.21.158">
+         <service>games_analytics</service>
+      </ip>
+      <ip value="54.179.189.119" internalip="10.14.21.152">
+         <service>notifier</service>
+      </ip>
+   </servicesmapped>
+   <timestamp>1392367425578</timestamp>
+   <username>demo</username>
+</project>
