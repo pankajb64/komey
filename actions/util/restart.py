@@ -90,5 +90,5 @@ def start_service_local(action_args, user_args):
 	for module in modules:
 		command_args = { "mod_password" : password, "module" : module.strip() }
 		user_args["command_args"] = json.dumps(command_args)
-		user_args["command_file"] = "base/stop_base"
+		user_args["command_file"] = "base/start_base"
 		exec_command(action_args, user_args)

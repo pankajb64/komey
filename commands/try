@@ -1,6 +1,17 @@
 hey there, before you exit run exit/exit_commands
 #As a measure of safety, you should take backup for rummycircle at 54.254.244.122 with credentials from try
 #well, firstly you have to build rummycircle-54.254.244.122 using try build tool on 192.168.50.202:8080
-after that you will restart tomcat at 54.254.244.122 with credentials from try
-finally you will execute base/restart_try_rc_static_android_apache
-and just for time pass you can check the current directory by using send "pwd"
+#after that you will restart tomcat at 54.254.244.122 with credentials from try
+#finally you will execute base/restart_try_rc_static_android_apache
+#and just for time pass you can check the current directory by using send "pwd"
+ssh login at 10.14.24.162 with credentials from try set nick try_te_162
+take backup for te, common
+#deactivate TE-63 from service admin at 10.14.21.14:8080
+stop te
+sleep for 3 seconds
+start te
+send "tail -f /home/deploy/te/logs/*.log | grep 'bound'" interact
+#activate TE-63 from service admin at 10.14.21.14:8080
+#sleep for 10 seconds
+#deactivate TE-63 from service admin at 10.14.21.14:8080
+ssh logout

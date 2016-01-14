@@ -3,8 +3,8 @@ def ssh_exec(command, terminal, interact):
 	terminal.sendline(command)
 	if interact == True:
 		terminal.interact()
-	else:	
-		terminal.prompt()
+	#else:	
+	#	terminal.prompt()
 	print "Result of execution of %s is %s " % (command, terminal.before)
 
 def ssh_exec_expect(command, expect, terminal, interact):

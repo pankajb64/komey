@@ -1,6 +1,6 @@
-\bdeactivate\s+(?P<slist>([a-z]+-\d+\s*,?\s*(and)?\s*)+)\b actions.service_admin.deactivate.deactivate
+\bdeactivate\s+(?P<slist>([a-z]+-\d+\s*,?\s*(and)?\s*)+)\s+from\s+service\s+admin\s+at\s+(?P<host>\S+)\b actions.service_admin.deactivate.deactivate
 #\bdeactivate\s+(?P<svctype>[a-z]+)-(?P<sid>\d+)\b actions.service_admin.deactivate.deactivate_single
-\bactivate\s+(?P<slist>([a-z]+-\d+\s*,?\s*(and)?\s*)+)\b actions.service_admin.activate.activate
+\bactivate\s+(?P<slist>([a-z]+-\d+\s*,?\s*(and)?\s*)+)\s+from\s+service\s+admin\s+at\s+(?P<host>\S+)\b actions.service_admin.activate.activate
 \b(sleep|wait)\s+for\s+(?P<time>\d+)\s+seconds\b actions.util.sleep.sleep_seconds
 \bset\s+config\s+(?P<key>\S+)\s+(equal)?\s*to\s+(?P<val>\S+)\b actions.util.handle_config.set_config
 \bget\s+config\s+(?P<key>\S+)\b actions.util.handle_config.get_config

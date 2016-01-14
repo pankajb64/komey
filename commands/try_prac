@@ -1,6 +1,8 @@
 before you exit run exit/exit_commands
 #ssh login at pankajB.ho.games24x7.com with credentials from local set nick local_term
 #put in cache branch_name equal to MultilingualProject
+#deactivate TE-63, CS-64 from service admin at 10.14.21.14:8080
+#activate TE-63, CS-64 from service admin at 10.14.21.14:8080
 #send "cd"
 #send "pwd"
 #send "cd work/2015/${branch_name}"
