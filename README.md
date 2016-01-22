@@ -16,7 +16,7 @@ To run :
 
 cd /path/to/komey/
 
-python komey.py command/your_command
+python komey.py commands/your_command
 
 
 Created by Pankaj Bhambhani
