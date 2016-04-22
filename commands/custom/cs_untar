@@ -1,0 +1,8 @@
+ssh login at ${arg_host} with credentials from ${arg_cred} set nick cs_untars
+send "cd /home/assets/27Jan2016Deployment/"
+send "sudo -S su tomcat" expect 1 time "assword:\s*,\$" respond with "${cs_untar_sudo_password},"
+send "pwd"
+send "ls -la"
+send "tar -xvf cs.tar"
+sleep for 10 seconds
+ssh logout

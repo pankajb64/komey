@@ -4,14 +4,20 @@ hey there, before you exit run exit/exit_commands
 #after that you will restart tomcat at 54.254.244.122 with credentials from try
 #finally you will execute base/restart_try_rc_static_android_apache
 #and just for time pass you can check the current directory by using send "pwd"
-ssh login at 10.14.24.162 with credentials from try set nick try_te_162
-take backup for te, common
+#scp /home/pankaj/work/2015/Jan27_2016_ProdFix/bpl/src/main/resources/bpl_sql_statements.xml to 54.254.167.219 at /home/deploy/bpl/conf/ with credentials from try
+#ssh login at 10.14.21.14 with credentials from try set nick try_cm
+#take backup for cm, common
 #deactivate TE-63 from service admin at 10.14.21.14:8080
-stop te
-sleep for 3 seconds
-start te
-send "tail -f /home/deploy/te/logs/*.log | grep 'bound'" interact
+#stop bpl
+#sleep for 3 seconds
+#start bpl
+#send "tail -f /home/deploy/bpl/logs/*.log" interact
 #activate TE-63 from service admin at 10.14.21.14:8080
 #sleep for 10 seconds
 #deactivate TE-63 from service admin at 10.14.21.14:8080
-ssh logout
+#ssh logout
+take backup for bpl at 54.255.198.88 with credentials from try
+take backup for aaae at 10.14.21.14 with credentials from try
+#take backup for te at 10.14.24.161 with credentials from try
+#take backup for cs at 10.14.24.164 with credentials from try
+#take backup for fm,tc at 10.14.24.165 with credentials from try

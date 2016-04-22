@@ -1,0 +1,5 @@
+ssh login at ${arg_host} with credentials from ${arg_cred} set nick ssh_fm_cp
+#send "cp /home/deploy/fm/conf/fm_ehcache.xml /home/assets/NFSMilestone2Ticket/fm/conf/"
+send "cp /home/deploy/fm/conf/guest_user_ehcache.xml /home/assets/NFSMilestone2Ticket/fm/conf/"
+#send "cp /home/deploy/fm/conf/fm.props /home/assets/NFSMilestone2Ticket/fm/conf/"
+ssh logout

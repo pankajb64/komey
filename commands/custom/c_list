@@ -1,0 +1,5 @@
+#execute fm_cp with args {"host":"192.168.35.38", "cred":"production", "path":"/home/assets/NFSMilestone2Ticket/"}
+#execute fm_cp with args {"host":"192.168.35.39", "cred":"production", "path":"/home/assets/NFSMilestone2Ticket/"}
+execute fm_cp with args {"host":"192.168.35.45", "cred":"production", "path":"/home/assets/NFSMilestone2Ticket/"}
+execute fm_cp with args {"host":"192.168.35.46", "cred":"production", "path":"/home/assets/NFSMilestone2Ticket/"}
+

@@ -23,7 +23,7 @@
 \bsend\s+"(?P<command>[^"]+)"(?P<interact>\s+interact)?$ actions.util.exec_util.send_command
 \bant\s+build\s+(?P<modules>(\w+\s*,?\s*)+)\b actions.util.build.ant_build
 \btake\s+backup(\s+for\s+(?P<modules>.+\S+))?\s+at(?P<hosts>.+)\s+with\s+credentials\s+from\s+(?P<credentials>\S+)\b actions.util.build.take_backup
-\btake\s+backup(\s+for\s+(?P<modules>.+\S+))?\b actions.util.build.take_backup_base
+#\btake\s+backup(\s+for\s+(?P<modules>.+\S+))?\b actions.util.build.take_backup_base
 \brestart\s+tomcat\s+at(?P<hosts>.+)\s+with\s+credentials\s+from\s+(?P<credentials>\S+)\b actions.util.restart.restart_tomcat
 \brestart\s+tomcat\b actions.util.restart.restart_tomcat_base
 #\brestart\s+apache\s+at(?P<hosts>.+)\s+with\s+credentials\s+from\s+(?P<credentials>\S+)\b actions.util.restart.restart_apache

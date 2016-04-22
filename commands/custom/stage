@@ -11,7 +11,7 @@ hey there, before you exit run exit/exit_commands
 #send "tail -f /home/deploy/bpl/logs/*" interact
 #ssh logout
 ssh login at 54.255.198.88 with credentials from stage set nick stage_bpl
-take backup for bpl,common
+#take backup for bpl,common
 send "sudo chown -R tomcat.tomcat /home/deploy/*" expect 1 time "assword:,\$" respond with "${stage_bpl_sudo_password},"
 stop bpl
 sleep for 3 seconds

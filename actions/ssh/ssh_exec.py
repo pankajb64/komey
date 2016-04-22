@@ -13,7 +13,7 @@ def ssh_exec_expect(command, expect, terminal, interact):
 	print "expect dict is %s" % expect
 	try:
 		for i in xrange(count):
-			index = terminal.expect(expect['expect_list'])
+			index = terminal.expect(expect['expect_list'], timeout=120)
 			print "index is is %s expect is %s before is \n%s" %(index, expect['expect_list'][index], terminal.before)
 			terminal.sendline(expect['response_list'][index])
 		if interact == True:

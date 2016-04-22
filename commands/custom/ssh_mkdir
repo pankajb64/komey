@@ -1,0 +1,5 @@
+ssh login at ${arg_host} with credentials from ${arg_cred} set nick ssh_mkdir
+send "mkdir -p ${arg_path}"
+send "cd ${arg_path}"
+send "pwd"
+ssh logout

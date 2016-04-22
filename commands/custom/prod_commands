@@ -1,0 +1,7 @@
+#scp /home/pankaj/work/2015/cs.tar to 192.168.35.32, 192.168.35.33, 192.168.35.54, 192.168.35.55, 192.168.35.16 at /home/assets/27Jan2016Deployment/cs/ with credentials from production
+before you exit run exit/exit_commands
+execute cs_untar with args {"host":"192.168.35.32", "cred":"production"}
+execute cs_untar with args {"host":"192.168.35.33", "cred":"production"}
+#execute cs_untar with args {"host":"192.168.35.54", "cred":"production"}
+#execute cs_untar with args {"host":"192.168.35.55", "cred":"production"}
+#execute cs_untar with args {"host":"192.168.35.16", "cred":"production"}
