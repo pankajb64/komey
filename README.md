@@ -6,7 +6,7 @@ If you know the right way, you need only ask.
 
 (Seriously, just check out the "command_mapping" file for a list of supported regex commands.
 
-And check "commands/try_prac" for a few example commands.
+And check "commands/custom/try_prac" for a few example commands.
 
 Dont refer to the "command list" file as it is old and misleading)
 
@@ -16,7 +16,7 @@ To run :
 
 cd /path/to/komey/
 
-python komey.py commands/your_command
+python komey.py commands/path_to/your_command
 
 
 Created by Pankaj Bhambhani
