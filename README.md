@@ -1,5 +1,8 @@
 This is komey, the linguistic wizard bot.
 -----------------------------------------
+
+Komey is a linguistic bot capable of automating build tasks by reading textual instructions and performing suitable actions.
+
 If you ask the wrong way, you will never know.
 
 If you know the right way, you need only ask.
