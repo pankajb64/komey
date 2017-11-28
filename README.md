@@ -22,11 +22,6 @@ cd /path/to/komey/
 python komey.py commands/path_to/your_command
 
 
-Created by Pankaj Bhambhani
-============================
-
-
-
 You need the following modules to use this (add here if you find something missing)
 
 python-2.7
@@ -49,4 +44,3 @@ importlib
 
 
 Enjoy :)
---------
