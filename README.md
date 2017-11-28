@@ -24,23 +24,23 @@ python komey.py commands/path_to/your_command
 
 You need the following modules to use this (add here if you find something missing)
 
-python-2.7
+* python-2.7
 
-requests
+* requests
 
-json
+* json
 
-xmltodict
+* xmltodict
 
-shlex
+* shlex
 
-pexpect
+* pexpect
 
-pxssh
+* pxssh
 
-re
+* re
 
-importlib
+* importlib
 
 
 Enjoy :)
